@@ -1,0 +1,7 @@
+{
+  "name": "CDRD",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
