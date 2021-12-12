@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/formsd7">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Paso 3 </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<br><br><br>
+<ion-content>
+  <div class="container">
+
+    <h2 class="active"> FORMULARIO DE PREGUNTAS DE SELECCION </h2><br>
+
+    <ion-item class="inputEmail">
+      <h3 class="container">26. ¿Ha tenido una enfermedad grave que haya exigido control médico periódico?</h3>
+    </ion-item>
+    <ion-item class="inputEmail">
+      <ion-select [(ngModel)]="newf8.res26" (ionChange)="OptionChanged()">
+        <ion-select-option value="Si">Si</ion-select-option>  
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+      <ion-item>
+        <h3>27. ¿Ha tenido hepatitis, ictericia o problemas de hígado?</h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf8.res27">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <h3> 28. ¿Ha padecido alguna enfermedad infecciosa grave tales como paludismo (malaria),
+          tripanosomiasis de Chagas, leishmaniasis, mononucleosis infecciosa, tuberculosis, etc.? </h3>
+      </ion-item>
+      <ion-item class="inputEmail"> 
+        <ion-select [(ngModel)]="newf8.res28">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <h3> 29. ¿Ha tenido alguna enfermedad grave del pulmón, cerebro, riñón, tiroides, aparato digestivo,etc.?   </h3>
+      </ion-item>
+      <ion-item class="inputEmail"> 
+        <ion-select [(ngModel)]="newf8.res29">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+<ion-button expand="full" (click)="SaveDatos(); ClickNextForm();">Siguiente</ion-button>
+  </div>
+   
+</ion-content>

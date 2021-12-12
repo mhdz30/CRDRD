@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/tab/folder/Inbox">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Mi Perfil</ion-title>
+  </ion-toolbar>  
+</ion-header>
+<ion-content  class="bg-image">
+
+  <div class="container">
+    <!-- Tabs Titles -->
+      <ion-icon class="icon-person" size="large" name="person"></ion-icon>
+      <h2 class="active"> DATOS DEL USUARIO</h2><br><br>
+    
+    <!--  Form -->
+    <div>
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon  class="login__icon" name="information-circle-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newReceptor.nombres" type="text" id="login" class="fadeIn second" name="login" placeholder=" Nombres"></ion-input>
+      </ion-item><br>
+
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon class="login__icon" name="information-circle-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newReceptor.apellidos" type="text" id="login" class="fadeIn second" name="login" placeholder=" Apellidos"></ion-input>
+      </ion-item><br>
+
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon class="login__icon"name="id-card-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newReceptor.cedula" type="number" id="login" class="fadeIn second" name="login" placeholder=" Cedula"></ion-input>
+      </ion-item><br>
+      
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="calendar-outline"></ion-icon></span>
+        <ion-datetime [(ngModel)]="newReceptor.fechanac" displayFormat="MM/DD/YYYY" placeholder=" Seleccione Fecha de Nacimiento"></ion-datetime>
+      </ion-item><br>
+
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="water-outline"></ion-icon></span>
+        <ion-select [(ngModel)]="newReceptor.tiposangre" placeholder=" Tipo de sangre">
+          <ion-select-option>A+</ion-select-option>
+          <ion-select-option>A-</ion-select-option>
+          <ion-select-option>B+</ion-select-option>
+          <ion-select-option>B-</ion-select-option>
+          <ion-select-option>AB+</ion-select-option>
+          <ion-select-option>AB-</ion-select-option>
+      </ion-select>
+      </ion-item><br>
+
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="male-female-outline"></ion-icon></span>
+        <ion-select [(ngModel)]="newReceptor.tiposangre" placeholder=" Sexo">
+          <ion-select-option>F</ion-select-option>
+          <ion-select-option>M</ion-select-option>
+
+      </ion-select>
+      </ion-item><br>
+
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon class="login__icon" name="information-circle-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newReceptor.cedula" type="number" id="login" class="fadeIn second" name="login" placeholder=" Peso(Lbs)"></ion-input>
+      </ion-item><br>
+
+      <br>
+<ion-button  expand="full" style="margin: 55px" (click)="DatosSaved()">
+  
+  Guardar datos
+
+</ion-button>
+    </div>
+ 
+
+    
+</div>
+
+
+             
+   
+</ion-content>

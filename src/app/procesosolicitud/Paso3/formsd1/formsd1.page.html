@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/formdtosdon">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Paso 3 </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<br><br><br>
+<ion-content>
+  <div class="container">
+
+    <h2 class="active"> FORMULARIO DE PREGUNTAS DE SELECCION </h2><br>
+
+    <ion-item class="inputEmail">
+      <h3 class="container">1. ¿Ha leído los requisitos que le hemos indicado en la aplicacion?</h3>
+    </ion-item>
+    <ion-item class="inputEmail">
+      <ion-select [(ngModel)]="newf1.res1">
+        <ion-select-option value="Si">Si</ion-select-option>  
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+      <ion-item>
+        <h3>2. ¿Tiene más de 18 años y pesa más de 50 Kg.?</h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf1.res2">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <h3>3. ¿Ha sido rechazado como donante en alguna ocasión? </h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf1.res3">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+
+      <ion-item>
+        <h3> 4. ¿Ha donado sangre en los últimos 2 meses?  </h3>
+      </ion-item>
+      <ion-item class="inputEmail"> 
+        <ion-select [(ngModel)]="newf1.res4">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br><br>
+<ion-button expand="full" (click)="SaveDatosF1(); ClickNextForm();">Siguiente</ion-button>
+  </div>
+   
+</ion-content>

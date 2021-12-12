@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/formsd1">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Paso 3 </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<br><br><br>
+<ion-content>
+  <div class="container">
+
+    <h2 class="active"> FORMULARIO DE PREGUNTAS DE SELECCION </h2><br>
+
+    <ion-item class="inputEmail">
+      <h3 class="container">5. ¿Se encuentra bien de salud?</h3>
+    </ion-item>
+    <ion-item class="inputEmail">
+      <ion-select [(ngModel)]="newf1.res1">
+        <ion-select-option value="Si">Si</ion-select-option>  
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+      <ion-item>
+        <h3>6. Si es mujer ¿Está embarazada, o lo ha estado, en los últimos 6 meses</h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf1.res2">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <h3>7. ¿Está actualmente en lista de espera para consulta o exploración médica? </h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf1.res3">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+
+      <ion-item>
+        <h3> 8. ¿Está tomando o ha tomado en los últimos días, algún medicamento?  </h3>
+      </ion-item>
+      <ion-item class="inputEmail"> 
+        <ion-select [(ngModel)]="newf1.res4">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br><br>
+<ion-button expand="full" (click)="SaveDatosF2(); ClickNextForm();">Siguiente</ion-button>
+  </div>
+   
+</ion-content>

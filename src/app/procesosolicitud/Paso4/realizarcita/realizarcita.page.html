@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/formsd10">
+        <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="title">Paso 4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">  
+    
+    <h2 class="active"> REALIZAR CITA</h2><br><br>
+   
+    <ion-card>
+      <ion-card-content>
+        <ion-button fill="clear" class="btncardreceptor" ion-button icon-right (click)="picker.open()">
+          <ion-datetime #picker pickerFormat="DD MMMM YYYY" [min]="datePickerMin" [(ngModel)]="datePicker" (ionChange)="changeDate()"></ion-datetime>
+          <ion-icon class="icon-card" name="calendar-outline"></ion-icon>
+        </ion-button>
+        
+      </ion-card-content>
+   
+  
+      <ion-card-header class="tcard">
+        TAP PARA SELECCIONAR CITA
+      </ion-card-header>
+    </ion-card><br><br><br><br><br> 
+  <ion-button  expand="full" style="margin: 3px" (click)="SaveDatosCita(); ClickNextForm();">Finalizar</ion-button>
+  
+  </div>
+
+</ion-content>
+<!--<ion-item>
+  <ion-label>Fecha</ion-label>
+  <ion-datetime  displayFormat="D MMM YYYY H:mm"
+   min="2021" max="2021" ></ion-datetime>
+</ion-item>-->

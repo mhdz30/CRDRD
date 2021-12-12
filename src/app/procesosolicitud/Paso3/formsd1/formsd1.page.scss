@@ -1,0 +1,20 @@
+
+h2 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display:inline-block;
+    text-align: center;
+    margin-left: 15px;
+    color: #cccccc;
+
+    
+  }
+  h2.active {
+  
+    color: #0d0d0d;
+    border-bottom: 2px solid #D94349;
+  }
+ion-title{
+    text-align: center;
+}

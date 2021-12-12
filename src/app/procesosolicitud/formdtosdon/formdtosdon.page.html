@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/receptor">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Paso 2 </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<ion-content  class="bg-image">
+
+  <div class="container">
+    <!-- Tabs Titles -->
+    <ion-icon class="icon-person" size="large" name="person"></ion-icon>
+    <h2 class="active"> DATOS DEL DONANTE INSTANTANEO</h2><br><br>
+    
+
+
+    <!--  Form -->
+
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon  class="login__icon" name="information-circle-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newDonanteInstantaneo.nombres" type="text" id="login" class="fadeIn second" placeholder=" Nombres"></ion-input>
+      </ion-item><br>
+
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon class="login__icon" name="information-circle-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newDonanteInstantaneo.apellidos" type="text" id="login" class="fadeIn second"  placeholder=" Apellidos"></ion-input>
+      </ion-item><br>
+
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon class="login__icon"name="id-card-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newDonanteInstantaneo.cedula" type="number" id="login" class="fadeIn second"  placeholder=" Cedula"></ion-input>
+      </ion-item><br>
+      
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="calendar-outline"></ion-icon></span>
+        <ion-datetime [(ngModel)]="newDonanteInstantaneo.fechanac" displayFormat="MM/DD/YYYY" placeholder=" Seleccione Fecha de Nacimiento"></ion-datetime>
+      </ion-item><br>
+
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="water-outline"></ion-icon></span>
+        <ion-select [(ngModel)]="newDonanteInstantaneo.tiposangredon" placeholder=" Tipo de sangre a donar">
+          <ion-select-option>A+</ion-select-option>
+          <ion-select-option>A-</ion-select-option>
+          <ion-select-option>B+</ion-select-option>
+          <ion-select-option>B-</ion-select-option>
+          <ion-select-option>AB+</ion-select-option>
+          <ion-select-option>AB-</ion-select-option>
+      </ion-select>
+      </ion-item><br>
+
+  
+      <ion-button class="btns" expand="block" (click)="SaveDatosDonanteInsta(); ClickSiguiente();">Siguiente</ion-button>
+      
+    
+
+    
+
+
+</div>
+
+
+             
+   
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/formsd5">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Paso 3 </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<br><br><br>
+<ion-content>
+  <div class="container">
+
+    <h2 class="active"> FORMULARIO DE PREGUNTAS DE SELECCION </h2><br>
+
+    <ion-item class="inputEmail">
+      <h3 class="container">21. ¿Ha tenido contacto con la sangre de otra persona por pinchazo accidental o salpicadura? </h3>
+    </ion-item>
+    <ion-item class="inputEmail">
+      <ion-select [(ngModel)]="newf6.res21">
+        <ion-select-option value="Si">Si</ion-select-option>  
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+      <ion-item>
+        <h3>22. ¿Ha convivido o mantenido contacto íntimo con alguien que tuviese hepatitis o ictericia o fuera portador del virus de la hepatitis?</h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf6.res22">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <h3> 23. ¿Ha realizado algún viaje (turismo, laboral, ONG, visita a la familia) a África, América, Asia u Oceanía? </h3>
+      </ion-item>
+      <ion-item class="inputEmail"> 
+        <ion-select [(ngModel)]="newf6.res23">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+<ion-button expand="full" (click)="SaveDatos(); ClickNextForm();">Siguiente</ion-button>
+  </div>
+   
+</ion-content>

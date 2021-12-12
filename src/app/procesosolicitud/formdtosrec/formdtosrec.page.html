@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/tab/receptor">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Paso 1 </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<ion-content  class="bg-image">
+
+  <div class="container">
+    <!-- Tabs Titles -->
+    <div>
+      <ion-icon class="icon-person" size="large" name="person"></ion-icon>
+      <h2 class="active"> DATOS DE SOLICITUD</h2><br><br>
+  
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="water-outline"></ion-icon></span>
+        <ion-select [(ngModel)]="newSolicitud.tiposangrereq" placeholder=" Tipo de sangre requerida">
+          <ion-select-option>A+</ion-select-option>
+          <ion-select-option>A-</ion-select-option>
+          <ion-select-option>B+</ion-select-option>
+          <ion-select-option>B-</ion-select-option>
+          <ion-select-option>AB+</ion-select-option>
+          <ion-select-option>AB-</ion-select-option>
+      </ion-select>
+      </ion-item><br>
+  
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="water-outline"></ion-icon></span>
+        <ion-select [(ngModel)]="newSolicitud.cantidadreq" placeholder=" Cantidad requerida">
+          <ion-select-option>1 pinta (473.17 ml)</ion-select-option>
+          <ion-select-option>2 pintas (946.74 ml)</ion-select-option>
+          <ion-select-option>3 pintas (1.419,51 ml)</ion-select-option>
+          <ion-select-option>4 pintas (1.892,68 ml)</ion-select-option>
+          <ion-select-option>5 pintas (2.365,85 ml)</ion-select-option>
+      </ion-select>
+      </ion-item><br>
+  
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="home-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newSolicitud.institucionsolic"type="text" id="password" class="fadeIn third" name="login" placeholder=" Institucion que solicita"></ion-input>
+      </ion-item><br>
+  
+  
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon class="login__icon"  name="person-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newSolicitud.medicosolic" type="email" id="login" class="fadeIn second" name="login" placeholder="Nombre del medico solicitante"></ion-input>
+      </ion-item><br>
+  
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="calendar-outline"></ion-icon></span>
+        <ion-datetime [(ngModel)]="newSolicitud.fechaindic" displayFormat="MM/DD/YYYY" placeholder=" Fecha de Indicación"></ion-datetime>
+      </ion-item><br><br>
+    </div>
+  
+
+    <ion-button class="btnrecep"  expand="full" fill="outline" (click)="DatosReceptor(); SaveDatosSolicitud();">
+      <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+      <b>DATOS DEL RECEPTOR</b>
+    
+    </ion-button><br><br>
+    
+    <!--  Form -->
+    <div *ngIf="enableDatosReceptor">
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon  class="login__icon" name="information-circle-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newReceptor.nombres" type="text" id="login" class="fadeIn second" name="login" placeholder=" Nombres"></ion-input>
+      </ion-item><br>
+
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon class="login__icon" name="information-circle-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newReceptor.apellidos" type="text" id="login" class="fadeIn second" name="login" placeholder=" Apellidos"></ion-input>
+      </ion-item><br>
+
+      <ion-item class="inputEmail"> 
+        <span item-right><ion-icon class="login__icon"name="id-card-outline"></ion-icon></span>
+        <ion-input [(ngModel)]="newReceptor.cedula" type="number" id="login" class="fadeIn second" name="login" placeholder=" Cedula"></ion-input>
+      </ion-item><br>
+      
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="calendar-outline"></ion-icon></span>
+        <ion-datetime [(ngModel)]="newReceptor.fechanac" displayFormat="MM/DD/YYYY" placeholder=" Seleccione Fecha de Nacimiento"></ion-datetime>
+      </ion-item><br>
+
+      <ion-item class="inputEmail">
+        <span item-right><ion-icon class="login__icon" name="water-outline"></ion-icon></span>
+        <ion-select [(ngModel)]="newReceptor.tiposangre" placeholder=" Tipo de sangre">
+          <ion-select-option>A+</ion-select-option>
+          <ion-select-option>A-</ion-select-option>
+          <ion-select-option>B+</ion-select-option>
+          <ion-select-option>B-</ion-select-option>
+          <ion-select-option>AB+</ion-select-option>
+          <ion-select-option>AB-</ion-select-option>
+      </ion-select>
+      </ion-item><br>
+
+      <br>
+<ion-button  expand="full" style="margin: 55px" (click)="SaveDatosReceptor(); ClickReceptor();">
+  
+  Siguiente
+
+</ion-button>
+    </div>
+ 
+
+    
+</div>
+
+
+             
+   
+</ion-content>

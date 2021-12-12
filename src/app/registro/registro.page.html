@@ -1,0 +1,68 @@
+<ion-content  class="bg-image">
+  <body>
+    <div class="container">
+      <div class="screen">
+        <div class="screen__content">
+
+          <div class="wrapper fadeInDown">
+            <div id="formContent">
+              <!-- Tabs Titles -->
+              <h2 class="active"> REGISTRATE </h2>
+              
+      
+          
+              <!--  Form -->
+                <ion-item class="inputEmail"> 
+                  <span item-right><ion-icon  class="login__icon" name="information-circle-outline"></ion-icon></span>
+                  <ion-input [(ngModel)]='name' type="text" id="login" class="fadeIn second" name="login" placeholder=" Nombres"></ion-input>
+                </ion-item><br>
+
+                <ion-item class="inputEmail"> 
+                  <span item-right><ion-icon class="login__icon" name="information-circle-outline"></ion-icon></span>
+                  <ion-input [(ngModel)]='lastname' type="text" id="login" class="fadeIn second" name="login" placeholder=" Apellidos"></ion-input>
+                </ion-item><br>
+                
+                <ion-item class="inputEmail">
+                  <span item-right><ion-icon class="login__icon" name="calendar-outline"></ion-icon></span>
+                  <ion-datetime [(ngModel)]='bd'displayFormat="MM/DD/YYYY" placeholder=" 14/11/2021"></ion-datetime>
+                </ion-item><br>
+          
+                <ion-item class="inputEmail">
+                  <span item-right><ion-icon class="login__icon" name="water-outline"></ion-icon></span>
+                  <ion-select placeholder=" Tipo de sangre" [(ngModel)]='ts'>
+                    <ion-select-option>A+</ion-select-option>
+                    <ion-select-option>A-</ion-select-option>
+                    <ion-select-option>B+</ion-select-option>
+                    <ion-select-option>B-</ion-select-option>
+                    <ion-select-option>AB+</ion-select-option>
+                    <ion-select-option>AB-</ion-select-option>
+                </ion-select>
+                </ion-item><br>
+                
+                <ion-item class="inputEmail"> 
+                  <span item-right><ion-icon class="login__icon" name="mail-outline"></ion-icon></span>
+                  <ion-input [(ngModel)]='email' type="email" id="login" class="fadeIn second" name="login" placeholder=" Email"></ion-input>
+                </ion-item><br>
+
+                <ion-item class="inputPass">
+                  <span item-right><ion-icon class="login__icon" name="lock-closed-outline"></ion-icon></span>
+                  <ion-input [(ngModel)]='password' type="password" id="password" class="fadeIn third" name="login" placeholder=" Contraseña"></ion-input>
+                </ion-item><br>
+
+                <ion-button  (click)="signup()" type="submit" class="fadeIn fourth">Regístrarme</ion-button>
+
+          
+            </div>
+          </div>
+        </div>
+        <div class="screen__background">
+          <span class="screen__background__shape screen__background__shape4"></span>
+         		
+          <span class="screen__background__shape screen__background__shape2"></span>
+       
+          
+        </div>		
+      </div>
+    </div>
+  </body>
+</ion-content>

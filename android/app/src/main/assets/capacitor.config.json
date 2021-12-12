@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "CDRD",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

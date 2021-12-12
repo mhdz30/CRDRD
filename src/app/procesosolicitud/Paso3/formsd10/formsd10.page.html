@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/formsd9">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Paso 3 </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<br><br><br>
+<ion-content>
+  <div class="container">
+
+    <h2 class="active"> FORMULARIO DE PREGUNTAS DE SELECCION </h2><br>
+
+    <ion-item class="inputEmail">
+      <h3 class="container">35. ¿Ha tenido algún problema hemorrágico o enfermedad de la sangre tal como anemia o exceso de glóbulos rojos</h3>
+    </ion-item>
+    <ion-item class="inputEmail">
+      <ion-select [(ngModel)]="newf10.res35">
+        <ion-select-option value="Si">Si</ion-select-option>  
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+      <ion-item>
+        <h3>36. ¿Ha recibido alguna transfusión de sangre o de factores de la coagulación? </h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf10.res36">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <h3> 37. ¿Ha tomado Neotigason por problemas de piel? </h3>
+      </ion-item>
+      <ion-item class="inputEmail"> 
+        <ion-select [(ngModel)]="newf10.res37">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <h3> 38. ¿Ha recibido hormona de crecimiento de origen humano (antes de 1987)?</h3>
+      </ion-item>
+      <ion-item class="inputEmail"> 
+        <ion-select [(ngModel)]="newf10.res38">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+ <br><br>
+<ion-button expand="full" (click)="SaveDatos(); ClickNextForm();">Siguiente</ion-button>
+  </div>
+   
+</ion-content>

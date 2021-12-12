@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/convocatoriasmain">
+        <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Convocatorias</ion-title>
+  </ion-toolbar>
+</ion-header><br>
+
+<ion-content>
+  <div class="content">
+    <ion-label><b>Convocatorias realizadas </b></ion-label><br><br>
+    <ion-item *ngFor="let pintas of PintasSangreExistentes">  
+      <ion-label>La cantidad disponible de sangre {{pintas.nomTipoSangre}} <br>es de 
+        {{pintas.cantidadexistente}} pintas en la ciudad de <br> {{pintas.ubicacion}} </ion-label>
+    </ion-item>
+
+    <ion-card *ngFor="let c of Convocatorias"> 
+      <ion-item class="item">
+        <ion-icon class="blood" name="water"></ion-icon>
+        <ion-label><b>Tipo de sangre solicitada: {{c.tiposangre}} </b></ion-label>
+      </ion-item>
+    
+      <ion-card-content >
+        <b>Fecha de solicitud:</b> {{c.fechasolic.seconds * 1000 | date}} <br>
+        <b>Cantidad de donantes requeridos: {{c.cd}}</b> <br>
+        <ion-item *ngFor="let cit of Citas">
+          <ion-label *ngIf="enablevisualizarcod"><b>Código de garantía: {{cit.id}}</b> </ion-label>
+        </ion-item>
+        
+      </ion-card-content>
+  
+      <ion-item class="item">
+  
+        <ion-icon class="location" name="location"></ion-icon>
+        <ion-label><b>{{c.ubicacion}} </b></ion-label>
+      </ion-item>
+
+      <ion-item class="item">
+        <ion-button (click)="VisualizarCod();" fill="outline" slot="end">Visualizar Código</ion-button><ion-button fill="outline" slot="end">Cancelar</ion-button>
+      </ion-item>
+    </ion-card>
+  </div>
+
+
+  
+ 
+  
+
+
+  
+  
+</ion-content>

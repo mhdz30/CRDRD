@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/formsd2">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Paso 3 </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<br><br><br>
+<ion-content>
+  <div class="container">
+
+    <h2 class="active"> FORMULARIO DE PREGUNTAS DE SELECCION </h2><br>
+
+
+    <ion-item class="tred">
+      <h3>En las proximas 12 horas:</h3>
+    </ion-item> 
+    <ion-item class="inputEmail">
+      <h3 class="container">9. ¿Va a realizar alguna actividad laboral o deportiva peligrosa?</h3>
+    </ion-item>
+    <ion-item class="inputEmail">
+      <ion-select [(ngModel)]="newf3.res9" placeholder="Seleccione respuesta">
+        <ion-select-option value="Si">Si</ion-select-option>  
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+      
+      <ion-item class="tred">
+        <h3>En las ultimas 2 semanas:</h3>
+      </ion-item>
+      <ion-item>
+        <h3>10. ¿Ha tenido fiebre acompañada de dolor de cabeza y malestar general?</h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf3.res10" placeholder="Seleccione respuesta">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <h3>11. ¿Ha estado en el dentista?  </h3>
+      </ion-item>
+      <ion-item class="inputEmail">
+        <ion-select [(ngModel)]="newf3.res11" placeholder="Seleccione respuesta">
+          <ion-select-option value=Si>Si</ion-select-option>  
+          <ion-select-option value=No>No</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+
+      <br><br>
+<ion-button expand="full" (click)="SaveDatosF3(); ClickNextForm();">Siguiente</ion-button>
+  </div>
+   
+</ion-content>

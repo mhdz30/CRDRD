@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/tab/folder/Inbox">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Mi Perfil</ion-title>
+  </ion-toolbar>  
+</ion-header>
+<ion-content  class="bg-image">
+
+  <div class="container">
+    <!-- Tabs Titles -->
+      <ion-icon class="icon-person" size="large" name="person"></ion-icon>
+      <h2 class="active"> DATOS DEL USUARIO</h2><br><br>
+    
+    <!--  Form -->
+    <div>
+      <ion-item  > 
+        <ion-header><b>Cédula:</b>   2560525896447</ion-header>
+      </ion-item><br>
+
+      <ion-item *ngIf="info" > 
+        <ion-header><b>Nombres:</b>   {{info.name}}</ion-header>
+      </ion-item><br>
+
+      <ion-item *ngIf="info" > 
+        <ion-header><b>Apellidos:</b>  {{info.lastname}}</ion-header>
+      </ion-item><br>
+      
+      <ion-item > 
+        <ion-header><b>Fecha de Nacimiento:</b>  {{info.bd.seconds * 1000 | date}}</ion-header>
+      </ion-item><br>
+
+      <ion-item > 
+        <ion-header><b>Tipo de Sangre:</b>  {{info.ts}}</ion-header>
+      </ion-item><br>
+
+      <ion-item > 
+        <ion-header><b>Sexo:</b>  sexo</ion-header>
+      </ion-item><br>
+
+      <ion-item > 
+        <ion-header><b>Peso:</b>  peso</ion-header>
+      </ion-item><br>
+
+      <ion-item > 
+        <ion-header><b>Ultima fecha de donación:</b>  fechado</ion-header>
+      </ion-item><br>
+
+      <br>
+<ion-button  expand="full" style="margin: 55px" (click)="Clickactdatos();">
+  
+  Actualizar datos
+
+</ion-button>
+    </div>
+ 
+
+    
+</div>
+
+
+             
+   
+</ion-content>
+

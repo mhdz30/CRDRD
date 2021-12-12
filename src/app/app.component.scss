@@ -1,6 +1,9 @@
 ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
+.title{
+  color: #fff;
+}
 
 ion-menu.md ion-content {
   --padding-start: 8px;
@@ -18,8 +21,10 @@ ion-menu.md ion-note {
 }
 
 ion-menu.md ion-list-header,
+ion-menu.md ion-label,
 ion-menu.md ion-note {
   padding-left: 10px;
+  font-size: 20px;
 }
 
 ion-menu.md ion-list#inbox-list {
@@ -29,7 +34,7 @@ ion-menu.md ion-list#inbox-list {
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
   font-weight: 600;
-
+  
   min-height: 20px;
 }
 

@@ -1,0 +1,64 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ttoolbar"size="large">  Receptor</ion-title>
+  </ion-toolbar>
+</ion-header><br>
+
+<ion-content>
+  <ion-label class="lblcont">Que deseas realizar?</ion-label>
+  <ion-card>
+    <ion-card-content>
+      <ion-button routerLink="/requisitossolic" fill="clear" class="btncardreceptor">
+        <ion-icon class="icon-card" name="information-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+
+    <ion-card-header class="tcard">
+      VER REQUISITOS PARA SOLICITAR
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-button routerLink="/consangre" fill="clear" class="btncardreceptor">
+        <ion-icon class="icon-card" name="water-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+
+    <ion-card-header class="tcard">
+      CONSULTA SANGRE NECESITADA
+    </ion-card-header>
+  </ion-card>
+
+  
+  <ion-card>
+    <ion-card-content>
+      <ion-button (click)="ClickSolicita()" fill="clear" class="btncardreceptor">
+        <ion-icon class="icon-card" name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+
+    <ion-card-header class="tcard">
+      SOLICITAR PINTAS
+    </ion-card-header>
+  </ion-card>
+
+  
+  <ion-card>
+    <ion-card-content>
+      <ion-button routerLink="/convocatoriasmain" fill="clear" class="btncardreceptor">
+        <ion-icon class="icon-card" name="accessibility-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+
+    <ion-card-header class="tcard">
+      CONVOCATORIAS
+    </ion-card-header>
+  </ion-card>
+
+ 
+</ion-content>
+

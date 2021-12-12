@@ -1,0 +1,49 @@
+<ion-content  class="bg-image">
+  <body>
+    <div class="container">
+      <div class="screen">
+        <div class="screen__content">
+
+          <div class="wrapper fadeInDown">
+            <div id="formContent">
+              <!-- Tabs Titles -->
+              <h2 class="active"> INGRESAR </h2>
+              
+          
+              <!-- Icon -->
+              <div class="fadeIn first">
+                <img src="assets/img/logoapp.jpg" id="icon" alt="User Icon" />
+              </div>
+          
+              <!-- Login Form -->
+
+              <form>
+                <ion-item class="inputEmail"> 
+                  <span item-right><ion-icon class="login__icon" name="mail-outline"></ion-icon></span>
+                  <ion-input [(ngModel)]='email' type="email" id="login" class="fadeIn second" name="login" placeholder=" Email"></ion-input>
+                </ion-item><br>
+                <ion-item class="inputPass">
+                  <span item-right><ion-icon class="login__icon" name="lock-closed-outline"></ion-icon></span>
+                  <ion-input [(ngModel)]='password' type="password" id="password" class="fadeIn third" name="login" placeholder=" Contraseña"></ion-input>
+                </ion-item><br>
+                
+
+                <ion-button (click)="login()" expand="block" type="submit" class="fadeIn fourth" >Iniciar Sesion</ion-button>
+                
+                <button routerLink="/registro" class="btnregister">Registrarme</button>
+              </form>
+
+          
+            </div>
+          </div>
+        </div>
+        <div class="screen__background">
+          <span class="screen__background__shape screen__background__shape4"></span>
+          <span class="screen__background__shape screen__background__shape3"></span>		
+          <span class="screen__background__shape screen__background__shape2"></span>
+          <span class="screen__background__shape screen__background__shape1"></span>
+        </div>		
+      </div>
+    </div>
+  </body>
+</ion-content>

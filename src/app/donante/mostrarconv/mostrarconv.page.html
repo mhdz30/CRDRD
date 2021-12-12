@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/tab/donante">
+        <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Convocatorias</ion-title>
+  </ion-toolbar>
+</ion-header><br>
+
+<ion-content>
+  <div class="content">
+    <ion-label><b>Convocatorias realizadas por los receptores </b></ion-label><br><br>
+    
+    <ion-card *ngFor="let c of Convocatorias"> 
+      <ion-item class="item">
+        <ion-icon name="water-outline"></ion-icon>
+        <ion-label><b>Tipo de sangre solicitada: {{c.tiposangre}} </b></ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+        <b>Fecha de solicitud:</b> {{c.fechasolic.seconds * 1000 | date}} <br>
+        <b>Cantidad de donantes requeridos: {{c.cd}}</b> 
+        
+      </ion-card-content>
+  
+      <ion-item class="item">
+  
+        <ion-icon name="location"></ion-icon>
+        <ion-label><b>{{c.ubicacion}} </b></ion-label>
+        <ion-button (click)="Clickdonar()" fill="outline" slot="end">Participar</ion-button>
+      </ion-item>
+    </ion-card>
+
+     
+  </div>
+ 
+  
+</ion-content>
+

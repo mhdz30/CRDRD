@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button routerLink="/convocatoriasmain">
+            <ion-icon class="btnback" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="title" >Realizar Convocatorias</ion-title>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+  <div class="container">
+   <h3 class="subti">Seleccione tipo de sangre que necesita y ciudad actual:</h3><br>
+   <div class="gotadesangre">
+     <img src="assets/img/gota.png" id="icon" alt="User Icon" />
+   </div><br><br>
+   <ion-item class="inputEmail">
+     <span item-right><ion-icon class="login__icon" name="water-outline"></ion-icon></span>
+     <ion-select placeholder=" Tipo de sangre" [(ngModel)]="newConvocatoria.tiposangre">
+       <ion-select-option value=A+>A+</ion-select-option>  
+       <ion-select-option value=A->A-</ion-select-option>
+       <ion-select-option value=B+>B+</ion-select-option>
+       <ion-select-option value=B->B-</ion-select-option>  
+     </ion-select>
+   </ion-item> <br>
+  
+   <ion-item class="inputEmail">
+     <span item-right><ion-icon class="login__icon" name="location-outline"></ion-icon></span>
+     <ion-select  placeholder=" Ubicación de la ciudad" [(ngModel)]="newConvocatoria.ubicacion" >
+         <ion-select-option value="Santo Domingo Este">Santo Domingo Este</ion-select-option>
+         <ion-select-option value="Santo Domingo Oeste">Santo Domingo Oeste</ion-select-option>
+         <ion-select-option value="Santiago">Santiago</ion-select-option>
+         <ion-select-option value="San Francisco de Macoris">San Francisco de Macoris</ion-select-option>
+         <ion-select-option value="Moca">Moca</ion-select-option>
+         <ion-select-option value="Maria Trinidad Sanchez">Maria Trinidad Sánchez</ion-select-option>
+     </ion-select>
+   </ion-item><br>
+
+   <ion-item class="inputEmail">
+    <span item-right><ion-icon class="login__icon" name="accessibility-outline"></ion-icon></span>
+    <ion-select placeholder=" Cantidad de donantes" [(ngModel)]="newConvocatoria.cd">
+      <ion-select-option value=1>1</ion-select-option>  
+      <ion-select-option value=2>2</ion-select-option>
+      <ion-select-option value=3>3</ion-select-option>
+      <ion-select-option value=4>4</ion-select-option>  
+      <ion-select-option value=5>5</ion-select-option>
+    </ion-select>
+  </ion-item> <br>
+ 
+  
+ 
+  
+   <ion-button class="btnC" expand="block" (click)="SaveDatosConvocatorias(); ClickVerConvocatoria();">Realizar</ion-button>
+  </div>
+      
+ </ion-content>
